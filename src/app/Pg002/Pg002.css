@@ -1,0 +1,39 @@
+.summaryService-container {
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
+
+.sectiontext {
+  padding: 3rem 1.5rem;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 0.75rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 75%;
+  height: auto;
+  color: #ffffff;
+  
+}
+
+.pg002-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color:#ffffffa9; /* blue-800 */
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #dbeafe;
+  padding-bottom: 0.5rem;
+}
+
+.pg002-paragraphs {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+
+
+

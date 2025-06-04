@@ -1,6 +1,6 @@
 'use client';
 
-import './Pg002.css';
+import './Pg004.css';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import ExpandableTab from '@/components/ExpandableTab/ExpandableTab';

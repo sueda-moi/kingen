@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen/LoadingScreen';
 import { usePageTransition } from '@/hooks/usePageTransition';
 import { useLocaleStore } from '@/store/useLocaleStore';
+import RightFloatingBar from './RightFloatingBar';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -85,13 +86,13 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   useEffect(() => {
-  const unlockScroll = () => {
-    document.documentElement.style.overflow = '';
-    document.documentElement.style.paddingRight = '';
-    document.body.style.overflow = '';
-  };
-  unlockScroll();
-}, [pathname]);
+    const unlockScroll = () => {
+      document.documentElement.style.overflow = '';
+      document.documentElement.style.paddingRight = '';
+      document.body.style.overflow = '';
+    };
+    unlockScroll();
+  }, [pathname]);
 
   // Show loading screen on first load
   if (!isFirstLoadFinished) {
@@ -105,6 +106,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     <>
       {/* Header with menu toggle */}
       <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <RightFloatingBar />
+
 
       {/* Animate page transitions */}
       <AnimatePresence mode="wait">

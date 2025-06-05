@@ -1,75 +1,69 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import ImageCarousel from '@/components/ImageCarousel/ImageCarousel';
-import "./Pg001.css"
+import './Pg001.css';
+import Image from 'next/image';
 import { useMessage } from '@/lib/useMessage';
 
-
-const sanitize = (html: string) => {
-  return html
-    .replace(/<(?!\/?(ruby|rt)>)/gi, '') // 只允许 ruby/rt 标签
-    .replace(/on\w+=".*?"/gi, '');        // 移除如 onclick=
-};
-
-
 const Pg001: React.FC = () => {
-
-  // const { messages } = useLocaleStore();
-  // const home = messages['home'];
   const getMessage = useMessage();
-  const router = useRouter();
-
-  useEffect(() => {
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = originalOverflow;
-    };
-  }, []);
-
-  const handleClick = () => {
-    router.push('/Pg002');
-  };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <main className="pg001-container">
+      {/* 🖼️ Hero Section */}
+      <section className="pg001-hero">
+        <Image src="/image/pg001-hero.jpg" alt="Hero" fill className="pg001-hero-image" />
+        <div className="pg001-hero-text">
+          <h1>{getMessage('Pg001','pg001_title')}</h1>
+          <p>{getMessage('Pg001','pg001_subtitle')}</p>
+        </div>
+      </section>
 
-      <ImageCarousel />
+      {/* 📰 News Section */}
+      <section className="pg001-news">
+        <h2 className="pg001-section-title">{getMessage('Pg001','pg001_news_title')}</h2>
+        <ul className="pg001-news-list">
+          <li><span className="pg001-news-date">2024.01.15</span> <span>[News] {getMessage('Pg001','pg001_news_1')}</span></li>
+          <li><span className="pg001-news-date">2024.01.12</span> <span>{getMessage('Pg001','pg001_news_2')}</span></li>
+          <li><span className="pg001-news-date">2023.12.28</span> <span>{getMessage('Pg001','pg001_news_3')}</span></li>
+        </ul>
+        <div className="pg001-news-more">View all</div>
+      </section>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 top-[calc(50%-150px)]">
-        <motion.p
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="responsive-title gradient-text"
-        >
-          {getMessage('Pg001', 'pg001_title')}
-        </motion.p>
+      {/* 🏢 Intro Section */}
+      <section className="pg001-intro">
+        <div className="pg001-intro-text">
+          <h3>{getMessage('Pg001','pg001_intro_title')}</h3>
+          <p>{getMessage('Pg001','pg001_intro_paragraph')}</p>
+          <div className="pg001-intro-more">View more</div>
+        </div>
+        <div className="pg001-intro-image">
+          <Image src="/image/pg001-intro.jpg" alt="Intro" width={600} height={400} />
+        </div>
+      </section>
 
-        <motion.p
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="responsive-subtitle gradient-text"
-          dangerouslySetInnerHTML={{ __html: sanitize(getMessage('Pg001', 'pg001_subtitle')) }}
-        >
-          {/* {getMessage('home', 'pg001_subtitle')} */}
-        </motion.p>
+      {/* ⭐ Features Section */}
+      <section className="pg001-features">
+        <h2 className="pg001-section-title">{getMessage('Pg001','pg001_features_title')}</h2>
+        <div className="pg001-feature-grid">
+          <div className="pg001-feature-card">
+            <Image src="/image/pg001-feature1.jpg" alt="Feature 1" width={400} height={250} />
+            <h4>① {getMessage('Pg001','pg001_feature1_title')}</h4>
+            <p>{getMessage('Pg001','pg001_feature1_desc')}</p>
+          </div>
+          <div className="pg001-feature-card">
+            <Image src="/image/pg001-feature2.jpg" alt="Feature 2" width={400} height={250} />
+            <h4>② {getMessage('Pg001','pg001_feature2_title')}</h4>
+            <p>{getMessage('Pg001','pg001_feature2_desc')}</p>
+          </div>
+          <div className="pg001-feature-card">
+            <Image src="/image/pg001-feature3.jpg" alt="Feature 3" width={400} height={250} />
+            <h4>③ {getMessage('Pg001','pg001_feature3_title')}</h4>
+            <p>{getMessage('Pg001','pg001_feature3_desc')}</p>
+          </div>
+        </div>
+      </section>
 
-        <motion.button
-          onClick={handleClick}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="custom-button"
-        >
-          {getMessage('Pg001', 'pg001_button_learn_more')}
-        </motion.button>
-
-      </div>
-    </div>
+    </main>
   );
 };
 

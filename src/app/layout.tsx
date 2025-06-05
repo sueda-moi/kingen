@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <Head>
         {/* ✅ import Noto Sans  */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+SC&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -29,3 +29,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

@@ -1,11 +1,123 @@
 {
-    "nav_home": "ホーム",
-  "nav_about": "概要",
-  "nav_services": "事業内容",
-  "nav_contact": "お問い合わせ",
-  "language_toggle": "言語切替",
-  "pg001_title": "私たちはＩＴを通してお客様のビジネスに最大限に貢献します。",
-  "pg001_subtitle": "「人」を大事にし、社員が幸せを感じる会社を目指します。" ,
-  "pg001_button_learn_more": "詳しく見る",
-  "footer_copyright": "ALL RIGHTS RESERVED ©Nexus Technology Co., Ltd."
+  "pg004_section_main": "Our Business",
+  "pg004_main_items": [
+    { "id": "real_estate_sales", "label": "不動産売買・管理事業" },
+    { "id": "development", "label": "不動産開発事業" },
+    { "id": "housing", "label": "住宅宿泊事業" },
+    { "id": "tourism", "label": "旅行事業" },
+    { "id": "staffing", "label": "人材派遣・紹介事業" },
+    { "id": "it_consulting", "label": "IT開発・コンサルティング" },
+    { "id": "international_trade", "label": "国際貿易支援事業" },
+    { "id": "design", "label": "店舗設計・内装事業" },
+    { "id": "consulting", "label": "多分野ビジネスコンサル" }
+  ],
+  "pg004_section_solution": "Solution & Collaboration",
+  "pg004_solution_items": [
+    { "id": "solution", "label": "不動産とITの融合提案" },
+    { "id": "collab", "label": "多国籍ネットワーク活用" }
+  ],
+  "pg004_section_evolution": "Evolution",
+  "pg004_evolution_items": [
+    { "id": "dx", "label": "業務のDX推進" },
+    { "id": "newbiz", "label": "新事業への挑戦" }
+  ],
+  
+  "pg004_title": "事業紹介",
+  "pg004_hero_subtitle": "金源株式会社の事業紹介",
+  "pg004_sections": {
+    "real_estate_sales": {
+      "title": "不動産売買・管理事業",
+      "cards": [
+        "東京圏を中心とした不動産売買仲介・運営",
+        "投資用不動産の管理・契約業務支援"
+      ]
+    },
+    "development": {
+      "title": "不動産開発事業",
+      "cards": [
+        "収益性を考慮した土地開発・企画提案",
+        "再開発・共同開発案件の支援"
+      ]
+    },
+    "housing": {
+      "title": "住宅宿泊事業",
+      "cards": [
+        "民泊・長期滞在型施設の運営",
+        "都内マンション型宿泊施設の展開"
+      ]
+    },
+    "tourism": {
+      "title": "旅行事業",
+      "cards": [
+        "訪日観光客向けツアー手配",
+        "観光資源の企画と広報"
+      ]
+    },
+    "staffing": {
+      "title": "人材派遣・紹介事業",
+      "cards": [
+        "IT・不動産業界を中心とした人材マッチング",
+        "多国籍バイリンガル人材紹介"
+      ]
+    },
+    "it_consulting": {
+      "title": "IT開発・コンサルティング",
+      "cards": [
+        "業務システム開発、Webサービス構築",
+        "中小企業向けIT導入支援"
+      ]
+    },
+    "international_trade": {
+      "title": "国際貿易支援事業",
+      "cards": [
+        "アジア諸国との物品輸出入支援",
+        "越境EC・現地通訳との連携"
+      ]
+    },
+    "design": {
+      "title": "店舗設計・内装事業",
+      "cards": [
+        "飲食・小売向け空間設計",
+        "内装工事の施工管理"
+      ]
+    },
+    "consulting": {
+      "title": "多分野ビジネスコンサル",
+      "cards": [
+        "経営戦略立案の支援",
+        "海外進出・業務改善のアドバイス"
+      ]
+    },
+    "solution": {
+      "title": "不動産とITの融合提案",
+      "cards": [
+        "スマートオフィス・民泊IoT連携事例",
+        "データ可視化による価値向上"
+      ]
+    },
+    "collab": {
+      "title": "多国籍ネットワーク活用",
+      "cards": [
+        "日中・東南アジア人材の連携",
+        "多言語対応ビジネス展開"
+      ]
+    },
+    "dx": {
+      "title": "業務のDX推進",
+      "cards": [
+        "社内業務のデジタル化",
+        "DX人材育成・外部連携支援"
+      ]
+    },
+    "newbiz": {
+      "title": "新事業への挑戦",
+      "cards": [
+        "海外医療ツーリズム",
+        "ブロックチェーン/AI実証実験"
+      ]
+    }
+  }
 }
+
+
+

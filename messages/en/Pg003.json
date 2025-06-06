@@ -1,50 +1,21 @@
 {
-  "greeting_title": "President’s Message",
-  "greeting_paragraphs": [
-    "Nexus Technology Co., Ltd. was founded in April 2014 as an IT services company specializing in system development and consulting.",
-    "Our founding principle is 'Respect for People.' We strive to enhance our technical capabilities and service quality to earn the trust and satisfaction of our clients. Through our business, each employee continues to grow both professionally and personally, aiming to bring happiness to everyone involved.",
-    "Guided by this belief, we have assembled talent with rich development experience in upstream design, finance, public sector, and logistics, and we provide SE services across Japan. Additionally, for overseas clients primarily based in China, we offer IT services, SE support, consulting, and related products from a global perspective, utilizing diverse resources and know-how.",
-    "Though still a young company, all our employees are committed to continuous effort. We sincerely appreciate your continued support and trust."
+  "pg003_mission_title": "Mission & Vision",
+  "pg003_mission": "To become a trusted multicultural service company that creates value connecting Japan and the world.",
+  "pg003_vision": "To establish a next-generation diversified business model integrating Real Estate, IT, and Tourism to support future urban living.",
+  "pg003_value": [
+    "Respect Differences, Build Bridges",
+    "Act with Integrity and Ownership",
+    "Deliver Reliable, Culturally-Aware Solutions"
   ],
-  "signature_image_alt": "CEO Signature",
-  "history_title": "Company History",
-  "history": [
-    {
-      "date": "March 2020",
-      "event": "Head office relocated to Sunrise Tachibana Building 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo."
-    },
-    {
-      "date": "June 2017",
-      "event": "Established subsidiary company Nexfo Co., Ltd."
-    },
-    {
-      "date": "September 2014",
-      "event": "Relocated head office to Tanaka Building, 5-15-1 Asakusabashi, Taito-ku, Tokyo."
-    },
-    {
-      "date": "April 2014",
-      "event": "Nexus Technology Co., Ltd. was officially established."
-    }
+  "pg003_about_title": "About Kingen",
+  "pg003_about_items": [
+    "Company Name: Kingen Co., Ltd.",
+    "Address: 508-5 Tsurumakicho, Waseda, Shinjuku-ku, Tokyo, Japan",
+    "Established: September 5, 2024 (Reiwa 6)",
+    "Capital: 100 million JPY",
+    "Representative: Chen Fagen",
+    "Registration Number: 0111-01-108741"
   ],
-  "pg003_timeline_title": "Company Timeline",
-  "pg003_message_title": "CEO Greeting & Philosophy",
-  "pg003_summary_title": "Company Overview",
-  "pg003_parent_title": "Head Office",
-  "pg003_subsidiary_title": "Subsidiary (100% owned by Nexus Technology)",
-  "pg003_parent_items": [
-    "Company Name: Nexus Technology Co., Ltd.",
-    "Address: Sunrise Tachibana Bldg. 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
-    "Capital: 30 million JPY",
-    "Established: April 25, 2014",
-    "Representative: Jianping Xu",
-    "Employees: Approx. 150 people"
-  ],
-  "pg003_subsidiary_items": [
-    "Company Name: Nexfo Co., Ltd.",
-    "Address: Sunrise Tachibana Bldg. 7F, 3-10-14 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004",
-    "Capital: 9.9 million JPY",
-    "Established: June 19, 2017",
-    "Representative: Kazushi Saito",
-    "Employees: Approx. 30 Japanese SEs"
-  ]
+  "pg003_philosophy_title": "Our Philosophy",
+  "pg003_philosophy_text": "Kingen Co., Ltd. leverages a multicultural perspective to engage in Real Estate, IT, and Tourism—fields that support daily life and society. Our diverse team addresses each client's needs sincerely and collaboratively, aiming to create value for a better future with integrity and growth."
 }

@@ -2,9 +2,9 @@ import { useLocaleStore } from '@/store/useLocaleStore';
 import type { MessageFile } from '@/store/useLocaleStore';
 
 export function useMessage() {
-  const { messages } = useLocaleStore(); // ✅ Hookを使用して状態を取得
+  const { messages } = useLocaleStore();
 
-  return (file: MessageFile, key: string): string => {
-    return messages[file]?.[key] || `[${key}]`;
+  return <T = string>(file: MessageFile, key: string): T => {
+    return (messages[file]?.[key] ?? `[${key}]`) as T;
   };
 }

@@ -1,111 +1,65 @@
 'use client';
 
-import './Pg003.css';
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
+import './Pg003.css';
 import { useMessage } from '@/lib/useMessage';
-import { GreetingSection } from '@/components/GreetingSection/GreetingSection';
-import { CompanyTimeline } from '@/components/CompanyTimeline/CompanyTimeline';
-
-const ScrollLottie = dynamic(() => import('@/components/ScrollLottie/ScrollLottie'), { ssr: false });
 
 const Pg003: React.FC = () => {
-  const [isAtBottom, setIsAtBottom] = useState(false);
-  const sectionTeamRef = useRef<HTMLDivElement>(null);
   const getMessage = useMessage();
-  const paragraphLines1 = getMessage('Pg003', 'pg003_parent_items');
-  const paragraphLines2 = getMessage('Pg003', 'pg003_subsidiary_items');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.documentElement.scrollHeight;
-      setIsAtBottom(scrollTop + windowHeight >= fullHeight - 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const pg003_value_paragraphs = getMessage('Pg003', 'pg003_value');
+  const pg003_about_items_paragraphs = getMessage('Pg003', 'pg003_about_items');
 
   return (
-    <main className="pg003-container">
-      {/* ⛰️ Header Banner */}
-      <div className="relative h-[25vh] w-full mb-12">
-        <Image
-          src="/image/pg003-bktop.jpg"
-          alt="Company Overview Background"
-          fill
-          className="object-cover w-full z-0"
-        />
-      </div>
+    <div className="pg003-wrapper">
+      {/* Mission & Vision セクション */}
+      <section className="pg003-mission-section">
+        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_mission_title')}</h2>
+        <div className="pg003-mission-grid">
+          <div className="pg003-mission-text">
+            <h3>Our Mission</h3>
+            <p>{getMessage('Pg003', 'pg003_mission')}</p>
 
-      {/* 💬 Section 1: Vision Message */}
-      <section className="pg003-section" id="vision">
-        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_message_title')}</h2>
-        <div className="pg003-message-flex">
-          <GreetingSection />
-        </div>
-      </section>
+            <h3>Our Vision</h3>
+            <p>{getMessage('Pg003', 'pg003_vision')}</p>
 
-      {/* 📅 Section 2: Company Timeline */}
-      <section className="pg003-section" id="timeline">
-        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_timeline_title')}</h2>
-        <div className="pg003-timeline-list">
-          <CompanyTimeline />
-
-        </div>
-      </section>
-
-
-
-      {/* 🏢 Section 3: Company Summary */}
-      <section className="pg003-section" id="summary">
-        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_summary_title')}</h2>
-
-        <div className="pg003-summary-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-          {/* 🎴 Left: Parent Company */}
-          <div className="pg003-card" style={{ padding: '2rem', backgroundColor: '#ffffff', boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)', borderRadius: '12px' }}>
-            <h3 className="pg003-card-title" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>{getMessage('Pg003', 'pg003_parent_title')}</h3>
-            <ul className="pg003-card-list">
+            <h3>Our Value</h3>
+            <ul>
               {
-                Array.isArray(paragraphLines1)
-                  ? paragraphLines1.map((line, idx) => (
-                    <p key={idx} className="mb-4 leading-relaxed">{line}</p>
+                Array.isArray(pg003_value_paragraphs)
+                  ? pg003_value_paragraphs.map((line: string, idx: number) => (
+                    <li key={idx}>{line}</li>
                   ))
-                  : <p className="mb-4 leading-relaxed">{paragraphLines1}</p>
+                  : <li>{pg003_value_paragraphs}</li>
               }
             </ul>
           </div>
 
-          {/* 🎴 Right: Subsidiary */}
-          <div className="pg003-card" style={{ padding: '2rem', backgroundColor: '#ffffff', boxShadow: '0 6px 16px rgba(0, 0, 0, 0.1)', borderRadius: '12px' }}>
-            <h3 className="pg003-card-title" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>{getMessage('Pg003', 'pg003_subsidiary_title')}</h3>
-            <ul className="pg003-card-list">
-              {
-                Array.isArray(paragraphLines2)
-                  ? paragraphLines2.map((line, idx) => (
-                    <p key={idx} className="mb-4 leading-relaxed">{line}</p>
-                  ))
-                  : <p className="mb-4 leading-relaxed">{paragraphLines2}</p>
-              }
-            </ul>
+          <div className="pg003-mission-image">
+            <Image src="/image/company_people.jpg" alt="Company Team" width={500} height={360} />
           </div>
         </div>
-
       </section>
 
-      {/* 👉 Scroll hint */}
-      {!isAtBottom && (
-        <div className="scroll-lottie-wrapper">
-          <ScrollLottie onClick={() => scrollToSection(sectionTeamRef)} />
-        </div>
-      )}
-    </main>
+      {/* About セクション */}
+      <section className="pg003-about-section">
+        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_about_title')}</h2>
+        <ul className="pg003-about-list">
+          {
+            Array.isArray(pg003_about_items_paragraphs)
+              ? pg003_about_items_paragraphs.map((line: string, idx: number) => (
+                <li key={idx}>{line}</li>
+              ))
+              : <li>{pg003_about_items_paragraphs}</li>
+          }
+        </ul>
+      </section>
+
+      {/* 想いセクション */}
+      <section className="pg003-philosophy-section">
+        <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_philosophy_title')}</h2>
+        <p>{getMessage('Pg003', 'pg003_philosophy_text')}</p>
+      </section>
+    </div>
   );
 };
 

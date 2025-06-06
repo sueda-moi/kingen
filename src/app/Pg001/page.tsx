@@ -3,6 +3,7 @@
 import './Pg001.css';
 import Image from 'next/image';
 import { useMessage } from '@/lib/useMessage';
+import Link from 'next/link';
 
 const Pg001: React.FC = () => {
   const getMessage = useMessage();
@@ -34,7 +35,8 @@ const Pg001: React.FC = () => {
         <div className="pg001-intro-text">
           <h3>{getMessage('Pg001','pg001_intro_title')}</h3>
           <p>{getMessage('Pg001','pg001_intro_paragraph')}</p>
-          <div className="pg001-intro-more">View more</div>
+          <Link href="/Pg003"><div className="pg001-intro-more">View more</div></Link>
+          
         </div>
         <div className="pg001-intro-image">
           <Image src="/image/pg001-intro.jpg" alt="Intro" width={600} height={400} />

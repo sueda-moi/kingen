@@ -1,94 +1,131 @@
 'use client';
 
-import './Pg004.css';
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import ExpandableTab from '@/components/ExpandableTab/ExpandableTab';
-import dynamic from 'next/dynamic';
-// import InfoCardButton from '@/components/InfoCardButton/InfoCardButton';
-// import styles from '@/components/InfoCardButton/InfoCardButton.module.css';
+import './Pg004.css';
+import { useEffect, useState } from 'react';
 import { useMessage } from '@/lib/useMessage';
-import { GreetingSection } from '@/components/GreetingSection/GreetingSection';
-import { CompanyTimeline } from '@/components/CompanyTimeline/CompanyTimeline';
-//import { useLocaleStore } from '@/store/useLocaleStore';
+import {
+  FaBuilding, FaGlobeAsia, FaTools, FaCogs, FaChartLine, FaPlusCircle,
+  FaUsers, FaRoute, FaHome, FaSitemap, FaHandshake
+} from 'react-icons/fa';
 
-// ⚙️ Lottie animation (disabled SSR for client-side only)
-const ScrollLottie = dynamic(() => import('@/components/ScrollLottie/ScrollLottie'), { ssr: false });
+import {
+  MenuItem,
+  SectionData,
+  IconMap,
+} from '@/types/Pg004';
 
-const Pg002: React.FC = () => {
-  const sectionTeamRef = useRef<HTMLDivElement>(null);
-  const sectionCompanyRef = useRef<HTMLDivElement>(null);
+const Pg004: React.FC = () => {
   const getMessage = useMessage();
-  const paragraphLines = getMessage('Pg002', 'pg002_paragraph_2');
+  const [activeSection, setActiveSection] = useState('');
+  const [showTop, setShowTop] = useState(false);
 
-
-  const [isAtBottom, setIsAtBottom] = useState(false);
+  const sectionsData = getMessage<SectionData>('Pg004', 'pg004_sections');
+  const mainTitle = getMessage('Pg004', 'pg004_title');
+  const subTitle = getMessage('Pg004', 'pg004_hero_subtitle');
+  const sectionMain = getMessage('Pg004', 'pg004_section_main');
+  const sectionSolution = getMessage('Pg004', 'pg004_section_solution');
+  const sectionEvolution = getMessage('Pg004', 'pg004_section_evolution');
+  const mainItems = getMessage<MenuItem[]>('Pg004', 'pg004_main_items');
+  const solutionItems = getMessage<MenuItem[]>('Pg004', 'pg004_solution_items');
+  const evolutionItems = getMessage<MenuItem[]>('Pg004', 'pg004_evolution_items');
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.documentElement.scrollHeight;
-      setIsAtBottom(scrollTop + windowHeight >= fullHeight - 20);
+      const scrollY = window.scrollY;
+      setShowTop(scrollY > 300);
+
+      const sections = document.querySelectorAll('h2[id]');
+      let currentId = '';
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          currentId = section.id;
+        }
+      });
+      setActiveSection(currentId);
+
+      const cards = document.querySelectorAll('.pg004-card');
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          card.classList.add('visible');
+        }
+      });
     };
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const iconMap: IconMap = {
+    real_estate_sales: <FaBuilding />,
+    development: <FaSitemap />,
+    housing: <FaHome />,
+    tourism: <FaRoute />,
+    staffing: <FaUsers />,
+    it_consulting: <FaTools />,
+    international_trade: <FaGlobeAsia />,
+    design: <FaBuilding />,
+    consulting: <FaHandshake />,
+    solution: <FaCogs />,
+    collab: <FaPlusCircle />,
+    dx: <FaChartLine />,
+    newbiz: <FaPlusCircle />
   };
 
+  const renderMenu = (title: string, items: MenuItem[]) => (
+    <div className="submenu-section">
+      <h3>{title}</h3>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            <a href={`#${item.id}`} className={activeSection === item.id ? 'active' : ''}>
+              {iconMap[item.id]} {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
-    <div className="container">
-      {/* 🔖 Summary section */}
-      <div className="flex w-full pb-[60px] relative h-[800px] mb-8">
-        <Image
-          src="/image/pg002-bktop.jpg"
-          alt="Summary Image"
-          fill
-          className="w-full block object-cover z-[100]"
-        />
-        <div className="summaryText-container">
-          <h1>{getMessage('Pg002', 'pg002_title')}</h1>
-          <p>{getMessage('Pg002', 'pg002_paragraph_1')}</p>
-          {/* <p>{getMessage('Pg002', 'pg002_paragraph_2')}</p> */}
-          {
-            Array.isArray(paragraphLines)
-              ? paragraphLines.map((line, idx) => (
-                <p key={idx} className="mb-4 leading-relaxed">{line}</p>
-              ))
-              : <p className="mb-4 leading-relaxed">{paragraphLines}</p>
-          }
-
-        </div>
+    <div className="pg004-wrapper">
+      <div className="pg004-submenu">
+        {renderMenu(sectionMain, mainItems)}
+        {renderMenu(sectionSolution, solutionItems)}
+        {renderMenu(sectionEvolution, evolutionItems)}
       </div>
 
-      {/* 👇 まだ最下部でなければ、スクロール誘導アニメーションを表示 */}
-      {!isAtBottom && (
-        <div className="scroll-lottie-wrapper">
-          <ScrollLottie onClick={() => scrollToSection(sectionTeamRef)} />
+      <section className="pg004-hero">
+        <Image src="/image/pg004-hero.jpg" alt="Business Content" fill className="pg004-hero-image" />
+        <div className="pg004-hero-text">
+          <h1>{mainTitle}</h1>
+          <p>{subTitle}</p>
         </div>
+      </section>
+
+      <div className="pg004-body">
+        {Object.entries(sectionsData).map(([key, val]) => (
+          <div key={key}>
+            <h2 id={key}>{val.title}</h2>
+            <div className="pg004-grid">
+              {val.cards.map((text, idx) => (
+                <div className="pg004-card" key={idx}>{text}</div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {showTop && (
+        <button className="pg004-top-btn" onClick={scrollToTop}>↑</button>
       )}
-
-      {/* 🧩 詳細セクション */}
-      <div className="flex flex-col gap-[30px] childContent">
-
-        {/* 🏢 会社概要 */}
-        <div className="section-detail" ref={sectionCompanyRef}>
-          <ExpandableTab
-            title={getMessage('Pg002', 'pg002_section_company_title')}
-            subtitle={getMessage('Pg002', 'pg002_section_company_subtitle')}
-          >
-            <GreetingSection />
-            <CompanyTimeline />
-
-          </ExpandableTab>
-        </div>
-
-      </div>
     </div>
   );
 };
 
-export default Pg002;
+export default Pg004;

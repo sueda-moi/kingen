@@ -1,11 +1,119 @@
 {
-    "nav_home": "ホーム",
-  "nav_about": "概要",
-  "nav_services": "事業内容",
-  "nav_contact": "お問い合わせ",
-  "language_toggle": "言語切替",
-  "pg001_title": "私たちはＩＴを通してお客様のビジネスに最大限に貢献します。",
-  "pg001_subtitle": "「人」を大事にし、社員が幸せを感じる会社を目指します。" ,
-  "pg001_button_learn_more": "詳しく見る",
-  "footer_copyright": "ALL RIGHTS RESERVED ©Nexus Technology Co., Ltd."
+  "pg004_section_main": "Our Business",
+  "pg004_main_items": [
+    { "id": "real_estate_sales", "label": "Real Estate Sales & Management" },
+    { "id": "development", "label": "Real Estate Development" },
+    { "id": "housing", "label": "Residential Lodging" },
+    { "id": "tourism", "label": "Tourism" },
+    { "id": "staffing", "label": "Staffing & Recruitment" },
+    { "id": "it_consulting", "label": "IT Development & Consulting" },
+    { "id": "international_trade", "label": "International Trade Support" },
+    { "id": "design", "label": "Store Design & Interiors" },
+    { "id": "consulting", "label": "Multisector Business Consulting" }
+  ],
+  "pg004_section_solution": "Solution & Collaboration",
+  "pg004_solution_items": [
+    { "id": "solution", "label": "Real Estate × IT Proposals" },
+    { "id": "collab", "label": "Utilizing Multinational Networks" }
+  ],
+  "pg004_section_evolution": "Evolution",
+  "pg004_evolution_items": [
+    { "id": "dx", "label": "Digital Transformation" },
+    { "id": "newbiz", "label": "New Business Challenges" }
+  ],
+  "pg004_title": "Business Overview",
+  "pg004_hero_subtitle": "Introduction to Kingen Corporation's Business",
+  "pg004_sections": {
+    "real_estate_sales": {
+      "title": "Real Estate Sales & Management",
+      "cards": [
+        "Brokerage and operations centered in Tokyo area",
+        "Support for investment property management and contracts"
+      ]
+    },
+    "development": {
+      "title": "Real Estate Development",
+      "cards": [
+        "Land development and proposals focused on profitability",
+        "Support for redevelopment and joint development"
+      ]
+    },
+    "housing": {
+      "title": "Residential Lodging",
+      "cards": [
+        "Operation of minpaku and long-stay accommodations",
+        "Expansion of condo-style lodging in Tokyo"
+      ]
+    },
+    "tourism": {
+      "title": "Tourism",
+      "cards": [
+        "Travel arrangement for inbound tourists",
+        "Tourism content planning and promotion"
+      ]
+    },
+    "staffing": {
+      "title": "Staffing & Recruitment",
+      "cards": [
+        "Talent matching in IT and real estate industries",
+        "Introduction of multilingual international talent"
+      ]
+    },
+    "it_consulting": {
+      "title": "IT Development & Consulting",
+      "cards": [
+        "Development of business systems and web services",
+        "Support for SME IT adoption"
+      ]
+    },
+    "international_trade": {
+      "title": "International Trade Support",
+      "cards": [
+        "Support for import/export with Asian countries",
+        "Coordination with cross-border EC and interpreters"
+      ]
+    },
+    "design": {
+      "title": "Store Design & Interiors",
+      "cards": [
+        "Designing spaces for food service and retail",
+        "Interior construction management"
+      ]
+    },
+    "consulting": {
+      "title": "Multisector Business Consulting",
+      "cards": [
+        "Support for strategic business planning",
+        "Advice for global expansion and operational improvement"
+      ]
+    },
+    "solution": {
+      "title": "Real Estate × IT Proposals",
+      "cards": [
+        "Examples of smart office & lodging IoT integration",
+        "Value enhancement through data visualization"
+      ]
+    },
+    "collab": {
+      "title": "Utilizing Multinational Networks",
+      "cards": [
+        "Collaboration with China and Southeast Asian talent",
+        "Deployment of multilingual businesses"
+      ]
+    },
+    "dx": {
+      "title": "Digital Transformation",
+      "cards": [
+        "Digitization of internal operations",
+        "Training DX talent and external collaboration"
+      ]
+    },
+    "newbiz": {
+      "title": "New Business Challenges",
+      "cards": [
+        "Overseas medical tourism",
+        "Blockchain and AI pilot projects"
+      ]
+    }
+  }
 }

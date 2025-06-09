@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen/LoadingScreen';
 import { usePageTransition } from '@/hooks/usePageTransition';
 import { useLocaleStore } from '@/store/useLocaleStore';
-import RightFloatingBar from './RightFloatingBar';
+// import RightFloatingBar from './RightFloatingBar';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -106,7 +106,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     <>
       {/* Header with menu toggle */}
       <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      <RightFloatingBar />
+      {/* <RightFloatingBar /> */}
 
 
       {/* Animate page transitions */}

@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     { path: '/Pg003', label: getMessage('Pg001', 'nav_pg003') },
     { path: '/Pg004', label: getMessage('Pg001', 'nav_pg004') },
     { path: '/Pg005', label: getMessage('Pg001', 'nav_pg005') },
-    { path: '/Pg006', label: getMessage('Pg001', 'nav_pg006') },
+  
   ];
 
   return (

@@ -1,118 +1,118 @@
 {
-  "pg004_section_main": "核心业务",
+  "pg004_section_main": "Our Business",
   "pg004_main_items": [
-    { "id": "real_estate_sales", "label": "不动产买卖与管理" },
-    { "id": "development", "label": "不动产开发业务" },
-    { "id": "housing", "label": "住宅住宿业务" },
-    { "id": "tourism", "label": "旅游业务" },
-    { "id": "staffing", "label": "人才派遣与介绍" },
-    { "id": "it_consulting", "label": "IT开发与咨询" },
-    { "id": "international_trade", "label": "国际贸易支持" },
-    { "id": "design", "label": "门店设计与内装" },
-    { "id": "consulting", "label": "多领域商务咨询" }
+    { "id": "real_estate_sales", "label": "Real Estate Sales & Management" },
+    { "id": "development", "label": "Real Estate Development" },
+    { "id": "housing", "label": "Residential Lodging" },
+    { "id": "tourism", "label": "Tourism" },
+    { "id": "staffing", "label": "Staffing & Recruitment" },
+    { "id": "it_consulting", "label": "IT Development & Consulting" },
+    { "id": "international_trade", "label": "International Trade Support" },
+    { "id": "design", "label": "Store Design & Interiors" },
+    { "id": "consulting", "label": "Multisector Business Consulting" }
   ],
-  "pg004_section_solution": "解决方案与合作",
+  "pg004_section_solution": "Solution & Collaboration",
   "pg004_solution_items": [
-    { "id": "solution", "label": "不动产与IT融合提案" },
-    { "id": "collab", "label": "多国网络资源活用" }
+    { "id": "solution", "label": "Real Estate × IT Proposals" },
+    { "id": "collab", "label": "Utilizing Multinational Networks" }
   ],
-  "pg004_section_evolution": "进化与拓展",
+  "pg004_section_evolution": "Evolution",
   "pg004_evolution_items": [
-    { "id": "dx", "label": "推动数字化转型" },
-    { "id": "newbiz", "label": "挑战新事业领域" }
+    { "id": "dx", "label": "Digital Transformation" },
+    { "id": "newbiz", "label": "New Business Challenges" }
   ],
-  "pg004_title": "业务介绍",
-  "pg004_hero_subtitle": "金源株式会社的业务介绍",
+  "pg004_title": "Business Overview",
+  "pg004_hero_subtitle": "Introduction to Kingen Corporation's Business",
   "pg004_sections": {
     "real_estate_sales": {
-      "title": "不动产买卖与管理",
+      "title": "Real Estate Sales & Management",
       "cards": [
-        "以东京圈为中心的不动产买卖中介与运营",
-        "投资型不动产的管理与合同支持"
+        "Brokerage and operations centered in Tokyo area",
+        "Support for investment property management and contracts"
       ]
     },
     "development": {
-      "title": "不动产开发业务",
+      "title": "Real Estate Development",
       "cards": [
-        "以收益性为核心的土地开发与企划提案",
-        "再开发与联合开发项目支持"
+        "Land development and proposals focused on profitability",
+        "Support for redevelopment and joint development"
       ]
     },
     "housing": {
-      "title": "住宅住宿业务",
+      "title": "Residential Lodging",
       "cards": [
-        "民宿与长期住宿设施的运营",
-        "在东京推广公寓型住宿设施"
+        "Operation of minpaku and long-stay accommodations",
+        "Expansion of condo-style lodging in Tokyo"
       ]
     },
     "tourism": {
-      "title": "旅游业务",
+      "title": "Tourism",
       "cards": [
-        "为访日游客安排旅游行程",
-        "策划与推广观光资源"
+        "Travel arrangement for inbound tourists",
+        "Tourism content planning and promotion"
       ]
     },
     "staffing": {
-      "title": "人才派遣与介绍",
+      "title": "Staffing & Recruitment",
       "cards": [
-        "主要面向IT与不动产行业的人才匹配",
-        "介绍多语言跨国人才"
+        "Talent matching in IT and real estate industries",
+        "Introduction of multilingual international talent"
       ]
     },
     "it_consulting": {
-      "title": "IT开发与咨询",
+      "title": "IT Development & Consulting",
       "cards": [
-        "业务系统开发与Web服务建设",
-        "为中小企业提供IT导入支持"
+        "Development of business systems and web services",
+        "Support for SME IT adoption"
       ]
     },
     "international_trade": {
-      "title": "国际贸易支持",
+      "title": "International Trade Support",
       "cards": [
-        "支援与亚洲国家的进出口业务",
-        "联动跨境电商与当地翻译服务"
+        "Support for import/export with Asian countries",
+        "Coordination with cross-border EC and interpreters"
       ]
     },
     "design": {
-      "title": "门店设计与内装",
+      "title": "Store Design & Interiors",
       "cards": [
-        "为餐饮和零售业提供空间设计",
-        "内装工程的施工管理"
+        "Designing spaces for food service and retail",
+        "Interior construction management"
       ]
     },
     "consulting": {
-      "title": "多领域商务咨询",
+      "title": "Multisector Business Consulting",
       "cards": [
-        "支持企业战略规划制定",
-        "提供海外拓展与业务优化建议"
+        "Support for strategic business planning",
+        "Advice for global expansion and operational improvement"
       ]
     },
     "solution": {
-      "title": "不动产与IT融合提案",
+      "title": "Real Estate × IT Proposals",
       "cards": [
-        "智慧办公室与民宿IoT整合案例",
-        "通过数据可视化提升资产价值"
+        "Examples of smart office & lodging IoT integration",
+        "Value enhancement through data visualization"
       ]
     },
     "collab": {
-      "title": "多国网络资源活用",
+      "title": "Utilizing Multinational Networks",
       "cards": [
-        "中日与东南亚人才的协作",
-        "支持多语言化的业务发展"
+        "Collaboration with China and Southeast Asian talent",
+        "Deployment of multilingual businesses"
       ]
     },
     "dx": {
-      "title": "推动数字化转型",
+      "title": "Digital Transformation",
       "cards": [
-        "公司内部业务流程数字化",
-        "DX人才培养与外部协作支持"
+        "Digitization of internal operations",
+        "Training DX talent and external collaboration"
       ]
     },
     "newbiz": {
-      "title": "挑战新事业领域",
+      "title": "New Business Challenges",
       "cards": [
-        "海外医疗旅游项目",
-        "区块链/人工智能实验项目"
+        "Overseas medical tourism",
+        "Blockchain and AI pilot projects"
       ]
     }
   }

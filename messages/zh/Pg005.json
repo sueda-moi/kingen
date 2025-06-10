@@ -1,12 +1,51 @@
 {
-  "pg004_access_title": "会社アクセス",
-  "pg004_office_nihonbashi": "東日本橋オフィス",
-  "pg004_office_nihonbashi_address": "〒103-0004 東京都中央区東日本橋3-10-14 サンライズ橘ビル7F",
-  "pg004_contact_title": "お問い合わせ方法",
-  "pg004_contact_instruction": "下記の方法でお気軽にお問い合わせください。",
-  "pg004_form_title": "メールでのお問い合わせ",
-  "pg004_form_name": "お名前",
-  "pg004_form_phone": "電話番号",
-  "pg004_form_message": "メッセージ",
-  "pg004_form_submit": "送信"
+  "pg005_title": "常见问题",
+  "pg005_contact": "联系我们",
+  "faq_categories": [
+    {
+      "title": "关于房地产买卖与租赁",
+      "questions": [
+        "购房前可以预约看房吗？",
+        "租赁合同的期限一般是多久？",
+        "非日本国籍也可以签约吗？",
+        "可以用公司名义签约吗？"
+      ]
+    },
+    {
+      "title": "关于建筑与翻新设计",
+      "questions": [
+        "可以咨询建筑设计方案吗？",
+        "可以代为安排施工公司吗？",
+        "是否接受小规模装修项目？",
+        "是否提供建筑相关的咨询服务？"
+      ]
+    },
+    {
+      "title": "关于旅馆与民宿运营",
+      "questions": [
+        "能协助申请民宿许可证吗？",
+        "是否协助处理旅馆业相关手续？",
+        "能否委托我们代管民宿？",
+        "是否提供收益模拟服务？"
+      ]
+    },
+    {
+      "title": "关于人力派遣与人才介绍",
+      "questions": [
+        "可派遣哪些职位类型？",
+        "是否支持短期或临时派遣？",
+        "是否提供外国籍员工派遣服务？",
+        "人才介绍与派遣有何区别？"
+      ]
+    }
+  ],
+  "form_title": "联系我们",
+  "form_name_label": "姓名（必填）",
+  "form_email_label": "邮箱地址",
+  "form_phone_label": "电话号码",
+  "form_message_label": "留言内容（最多500字）",
+  "form_submit": "提交",
+  "form_close": "关闭",
+  "form_error": "请填写所有必填项",
+  "form_success": "提交成功。"
 }

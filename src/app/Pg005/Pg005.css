@@ -1,0 +1,136 @@
+.pg005-wrapper {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #2e2e2e;
+}
+
+.pg005-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.pg005-faq-list {
+  margin-bottom: 60px;
+}
+
+.pg005-faq-item {
+  border-top: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+.pg005-faq-item summary {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pg005-faq-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.pg005-faq-item li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.pg005-contact {
+  text-align: center;
+}
+
+.pg005-contact-btn {
+  padding: 12px 24px;
+  background-color: #2e2e6f;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pg005-contact-btn:hover {
+  background-color: #1f1f5a;
+}
+
+.pg005-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.pg005-modal-content {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.pg005-modal-content h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.pg005-modal-content label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+.pg005-modal-content input,
+.pg005-modal-content textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pg005-modal-content textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.pg005-submit-btn {
+  background-color: #2e2e6f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 15px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pg005-submit-btn:hover {
+  background-color: #1f1f5a;
+}
+
+.pg005-close-btn {
+  background-color: transparent;
+  color: #333;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pg005-close-btn:hover {
+  background-color: #f0f0f0;
+}

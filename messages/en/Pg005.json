@@ -1,12 +1,51 @@
 {
-  "pg004_access_title": "会社アクセス",
-  "pg004_office_nihonbashi": "東日本橋オフィス",
-  "pg004_office_nihonbashi_address": "〒103-0004 東京都中央区東日本橋3-10-14 サンライズ橘ビル7F",
-  "pg004_contact_title": "お問い合わせ方法",
-  "pg004_contact_instruction": "下記の方法でお気軽にお問い合わせください。",
-  "pg004_form_title": "メールでのお問い合わせ",
-  "pg004_form_name": "お名前",
-  "pg004_form_phone": "電話番号",
-  "pg004_form_message": "メッセージ",
-  "pg004_form_submit": "送信"
+  "pg005_title": "Frequently Asked Questions",
+  "pg005_contact": "Contact Us",
+  "faq_categories": [
+    {
+      "title": "About Real Estate Sales & Leasing",
+      "questions": [
+        "Can I view the property before making a purchase?",
+        "What is the typical lease contract period?",
+        "Can non-Japanese nationals sign a contract?",
+        "Is corporate contract supported?"
+      ]
+    },
+    {
+      "title": "About Architecture & Renovation",
+      "questions": [
+        "How do I consult about design or layout?",
+        "Can you arrange the construction company?",
+        "Do you support small-scale renovation?",
+        "Is architectural consulting available?"
+      ]
+    },
+    {
+      "title": "About Hotel & Short-Stay Management",
+      "questions": [
+        "Do you support acquiring a minpaku (short-stay) license?",
+        "Can you assist with procedures under the Hotel Business Law?",
+        "Is property management service available?",
+        "Do you offer profitability simulations?"
+      ]
+    },
+    {
+      "title": "About Staffing & Recruitment",
+      "questions": [
+        "What types of positions can be dispatched?",
+        "Do you support short-term or temporary assignments?",
+        "Can you dispatch foreign workers?",
+        "What is the difference between dispatch and recruitment?"
+      ]
+    }
+  ],
+  "form_title": "Contact",
+  "form_name_label": "Name (required)",
+  "form_email_label": "Email Address",
+  "form_phone_label": "Phone Number",
+  "form_message_label": "Message (max 500 characters)",
+  "form_submit": "Submit",
+  "form_close": "Close",
+  "form_error": "Please fill out all required fields",
+  "form_success": "Your message has been sent."
 }

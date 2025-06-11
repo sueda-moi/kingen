@@ -47,5 +47,7 @@
   "form_submit": "送信する",
   "form_close": "閉じる",
   "form_error": "すべての必須項目を入力してください",
-  "form_success": "送信が完了しました。"
+  "form_success": "送信が完了しました。",
+  "form_fail": "送信に失敗しました。後ほど再度お試しください。"
+
 }

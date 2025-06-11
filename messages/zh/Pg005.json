@@ -47,5 +47,6 @@
   "form_submit": "提交",
   "form_close": "关闭",
   "form_error": "请填写所有必填项",
-  "form_success": "提交成功。"
+  "form_success": "提交成功。",
+  "form_fail": "提交失败，请稍后再试。"
 }

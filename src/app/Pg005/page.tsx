@@ -3,11 +3,14 @@
 import { useState } from 'react';
 import './Pg005.css';
 import { useMessage } from '@/lib/useMessage';
+import { sendContact } from '@/lib/sendContact';
+
 
 interface FaqSection {
   title: string;
   questions: string[];
 }
+
 
 const Pg005: React.FC = () => {
   const getMessage = useMessage();
@@ -19,15 +22,26 @@ const Pg005: React.FC = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!name || (!email && !phone) || !message) {
       alert(getMessage('Pg005', 'form_error'));
       return;
     }
-    console.log({ name, email, phone, message });
-    alert(getMessage('Pg005', 'form_success'));
-    setModalOpen(false);
+
+    try {
+      await sendContact({ name, email, phone, message });
+      alert(getMessage('Pg005', 'form_success'));
+      setModalOpen(false);
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+    } catch (error) {
+      console.error(error);
+      alert(getMessage('Pg005', 'form_fail'));
+    }
   };
+
 
   return (
     <div className="pg005-wrapper">

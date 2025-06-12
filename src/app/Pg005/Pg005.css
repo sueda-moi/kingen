@@ -1,87 +1,146 @@
+/* === 基础结构美化 + 动态过渡 === */
 .pg005-wrapper {
   padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
   font-family: 'Noto Sans JP', sans-serif;
   color: #2e2e2e;
+  animation: fadeInUp 0.6s ease-in-out;
 }
 
 .pg005-title {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-align: center;
+  position: relative;
 }
 
+.pg005-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #2e2e6f;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* === FAQ 部分 === */
 .pg005-faq-list {
   margin-bottom: 60px;
 }
 
 .pg005-faq-item {
   border-top: 1px solid #ccc;
-  padding: 15px 0;
+  padding: 18px 0;
+  transition: background-color 0.3s ease;
+}
+
+.pg005-faq-item:hover {
+  background-color: #f9f9fc;
 }
 
 .pg005-faq-item summary {
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.pg005-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.pg005-faq-item summary::after {
+  content: '+';
+  font-size: 22px;
+  line-height: 1;
+  color: #2e2e6f;
+  transition: transform 0.3s ease;
+}
+
+.pg005-faq-item[open] summary::after {
+  content: '-';
+  transform: rotate(180deg);
 }
 
 .pg005-faq-item ul {
-  padding-left: 20px;
-  margin-top: 10px;
+  padding-left: 0;
+  margin-top: 14px;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .pg005-faq-item li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 16px;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
 }
 
+.pg005-faq-item li::before {
+  content: '\2022';
+  color: #2e2e6f;
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+}
+
+/* === 联系按钮样式 === */
 .pg005-contact {
   text-align: center;
 }
 
 .pg005-contact-btn {
-  padding: 12px 24px;
-  background-color: #2e2e6f;
+  padding: 14px 32px;
+  background: linear-gradient(to right, #2e2e6f, #4b4bb2);
   color: white;
-  border: none;
   font-size: 16px;
-  border-radius: 4px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .pg005-contact-btn:hover {
-  background-color: #1f1f5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
+/* === 弹窗样式 === */
 .pg005-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(4px);
   z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .pg005-modal-content {
-  background-color: white;
+  background-color: #fff;
   padding: 30px 40px;
-  border-radius: 8px;
+  border-radius: 12px;
   max-width: 500px;
   width: 90%;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s ease-in-out;
 }
 
 .pg005-modal-content h2 {
   font-size: 22px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .pg005-modal-content label {
@@ -94,11 +153,18 @@
 .pg005-modal-content input,
 .pg005-modal-content textarea {
   width: 100%;
-  padding: 8px 12px;
+  padding: 10px 14px;
   margin-top: 6px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.pg005-modal-content input:focus,
+.pg005-modal-content textarea:focus {
+  border-color: #2e2e6f;
+  outline: none;
 }
 
 .pg005-modal-content textarea {
@@ -109,12 +175,13 @@
 .pg005-submit-btn {
   background-color: #2e2e6f;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 24px;
   border: none;
   font-size: 15px;
   margin-right: 10px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .pg005-submit-btn:hover {
@@ -124,13 +191,46 @@
 .pg005-close-btn {
   background-color: transparent;
   color: #333;
-  padding: 8px 14px;
+  padding: 10px 20px;
   font-size: 14px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .pg005-close-btn:hover {
   background-color: #f0f0f0;
+}
+
+/* === 动画 Keyframes === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

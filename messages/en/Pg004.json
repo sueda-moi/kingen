@@ -1,118 +1,72 @@
 {
   "pg004_section_main": "Our Business",
   "pg004_main_items": [
-    { "id": "real_estate_sales", "label": "Real Estate Sales & Management" },
-    { "id": "development", "label": "Real Estate Development" },
-    { "id": "housing", "label": "Residential Lodging" },
-    { "id": "tourism", "label": "Tourism" },
-    { "id": "staffing", "label": "Staffing & Recruitment" },
-    { "id": "it_consulting", "label": "IT Development & Consulting" },
-    { "id": "international_trade", "label": "International Trade Support" },
-    { "id": "design", "label": "Store Design & Interiors" },
-    { "id": "consulting", "label": "Multisector Business Consulting" }
+    { "id": "it_development", "label": "System Development & IT Services" },
+    { "id": "web_solution", "label": "Web Production & Operation Support" },
+    { "id": "staffing", "label": "Staffing & SES Services" },
+    { "id": "global_biz", "label": "B2B Partner Solutions" },
+    { "id": "startup", "label": "Startup Technology Support" },
+    { "id": "tourism", "label": "Tourism Planning & Events" }
   ],
   "pg004_section_solution": "Solution & Collaboration",
   "pg004_solution_items": [
-    { "id": "solution", "label": "Real Estate × IT Proposals" },
-    { "id": "collab", "label": "Utilizing Multinational Networks" }
+    { "id": "solution", "label": "IT Strategy Proposals" },
+    { "id": "collab", "label": "Multinational Network Utilization" }
   ],
   "pg004_section_evolution": "Evolution",
   "pg004_evolution_items": [
-    { "id": "dx", "label": "Digital Transformation" },
-    { "id": "newbiz", "label": "New Business Challenges" }
+    { "id": "dx", "label": "Promoting Digital Transformation" },
+    { "id": "newbiz", "label": "Challenging New Business Fields" }
   ],
   "pg004_title": "Business Overview",
-  "pg004_hero_subtitle": "Introduction to Kingen Corporation's Business",
+  "pg004_hero_subtitle": "Kingen Corporation Business Portfolio",
   "pg004_sections": {
-    "real_estate_sales": {
-      "title": "Real Estate Sales & Management",
+    "it_development": {
+      "title": "System Development & IT Services",
       "cards": [
-        "Brokerage and operations centered in Tokyo area",
-        "Support for investment property management and contracts"
+        "Design and development of business systems and cloud infrastructure",
+        "Construction and maintenance of EC sites and apps",
+        "Cloud integration support including AWS and Azure"
       ]
     },
-    "development": {
-      "title": "Real Estate Development",
+    "web_solution": {
+      "title": "Web Production & Operation Support",
       "cards": [
-        "Land development and proposals focused on profitability",
-        "Support for redevelopment and joint development"
-      ]
-    },
-    "housing": {
-      "title": "Residential Lodging",
-      "cards": [
-        "Operation of minpaku and long-stay accommodations",
-        "Expansion of condo-style lodging in Tokyo"
-      ]
-    },
-    "tourism": {
-      "title": "Tourism",
-      "cards": [
-        "Travel arrangement for inbound tourists",
-        "Tourism content planning and promotion"
+        "Corporate websites and landing page design",
+        "Multilingual CMS-based website implementation",
+        "Maintenance and UI/UX improvement consulting"
       ]
     },
     "staffing": {
-      "title": "Staffing & Recruitment",
+      "title": "Staffing & SES Services",
       "cards": [
-        "Talent matching in IT and real estate industries",
-        "Introduction of multilingual international talent"
+        "Dispatch of IT engineers and web designers",
+        "Bilingual staffing support in Japanese, Chinese, and English",
+        "Flexible assignment for in-house or contracted roles"
       ]
     },
-    "it_consulting": {
-      "title": "IT Development & Consulting",
+    "global_biz": {
+      "title": "B2B Partner Solutions",
       "cards": [
-        "Development of business systems and web services",
-        "Support for SME IT adoption"
+        "Support for global partnerships and dev team structuring",
+        "Multinational team-based project execution",
+        "Contract, interpretation, and translation assistance"
       ]
     },
-    "international_trade": {
-      "title": "International Trade Support",
+    "startup": {
+      "title": "Startup Technology Support",
       "cards": [
-        "Support for import/export with Asian countries",
-        "Coordination with cross-border EC and interpreters"
+        "Support for MVP development and tech stack planning",
+        "Tech infrastructure setup before/after funding",
+        "Joint prototyping and co-development support"
       ]
     },
-    "design": {
-      "title": "Store Design & Interiors",
+    "tourism": {
+      "title": "Tourism Planning & Events",
       "cards": [
-        "Designing spaces for food service and retail",
-        "Interior construction management"
-      ]
-    },
-    "consulting": {
-      "title": "Multisector Business Consulting",
-      "cards": [
-        "Support for strategic business planning",
-        "Advice for global expansion and operational improvement"
-      ]
-    },
-    "solution": {
-      "title": "Real Estate × IT Proposals",
-      "cards": [
-        "Examples of smart office & lodging IoT integration",
-        "Value enhancement through data visualization"
-      ]
-    },
-    "collab": {
-      "title": "Utilizing Multinational Networks",
-      "cards": [
-        "Collaboration with China and Southeast Asian talent",
-        "Deployment of multilingual businesses"
-      ]
-    },
-    "dx": {
-      "title": "Digital Transformation",
-      "cards": [
-        "Digitization of internal operations",
-        "Training DX talent and external collaboration"
-      ]
-    },
-    "newbiz": {
-      "title": "New Business Challenges",
-      "cards": [
-        "Overseas medical tourism",
-        "Blockchain and AI pilot projects"
+        "Inbound tours for overseas visitors",
+        "Tourism events leveraging local resources",
+        "Promotional collaboration with local governments and companies"
       ]
     }
   }

@@ -1,123 +1,103 @@
 {
   "pg004_section_main": "Our Business",
   "pg004_main_items": [
-    { "id": "real_estate_sales", "label": "不動産売買・管理事業" },
-    { "id": "development", "label": "不動産開発事業" },
-    { "id": "housing", "label": "住宅宿泊事業" },
-    { "id": "tourism", "label": "旅行事業" },
-    { "id": "staffing", "label": "人材派遣・紹介事業" },
-    { "id": "it_consulting", "label": "IT開発・コンサルティング" },
-    { "id": "international_trade", "label": "国際貿易支援事業" },
-    { "id": "design", "label": "店舗設計・内装事業" },
-    { "id": "consulting", "label": "多分野ビジネスコンサル" }
+    {
+      "id": "it_development",
+      "label": "システム開発・ITサービス"
+    },
+    {
+      "id": "web_solution",
+      "label": "Web制作・運用支援"
+    },
+    {
+      "id": "staffing",
+      "label": "人材派遣・SES事業"
+    },
+    {
+      "id": "global_biz",
+      "label": "BtoBパートナー支援"
+    },
+    {
+      "id": "startup",
+      "label": "スタートアップ技術支援"
+    },
+    {
+      "id": "tourism",
+      "label": "観光企画・イベント"
+    }
   ],
   "pg004_section_solution": "Solution & Collaboration",
   "pg004_solution_items": [
-    { "id": "solution", "label": "不動産とITの融合提案" },
-    { "id": "collab", "label": "多国籍ネットワーク活用" }
+    {
+      "id": "solution",
+      "label": "ITの提案"
+    },
+    {
+      "id": "collab",
+      "label": "多国籍ネットワーク活用"
+    }
   ],
   "pg004_section_evolution": "Evolution",
   "pg004_evolution_items": [
-    { "id": "dx", "label": "業務のDX推進" },
-    { "id": "newbiz", "label": "新事業への挑戦" }
+    {
+      "id": "dx",
+      "label": "業務のDX推進"
+    },
+    {
+      "id": "newbiz",
+      "label": "新事業への挑戦"
+    }
   ],
-  
   "pg004_title": "事業紹介",
   "pg004_hero_subtitle": "金源株式会社の事業紹介",
   "pg004_sections": {
-    "real_estate_sales": {
-      "title": "不動産売買・管理事業",
+    "it_development": {
+      "title": "システム開発・ITサービス",
       "cards": [
-        "東京圏を中心とした不動産売買仲介・運営",
-        "投資用不動産の管理・契約業務支援"
+        "業務システム・クラウドインフラの設計・開発",
+        "ECサイトやアプリケーションの構築・保守",
+        "AWS・Azure等のクラウド導入支援"
       ]
     },
-    "development": {
-      "title": "不動産開発事業",
+    "web_solution": {
+      "title": "Web制作・運用支援",
       "cards": [
-        "収益性を考慮した土地開発・企画提案",
-        "再開発・共同開発案件の支援"
-      ]
-    },
-    "housing": {
-      "title": "住宅宿泊事業",
-      "cards": [
-        "民泊・長期滞在型施設の運営",
-        "都内マンション型宿泊施設の展開"
-      ]
-    },
-    "tourism": {
-      "title": "旅行事業",
-      "cards": [
-        "訪日観光客向けツアー手配",
-        "観光資源の企画と広報"
+        "企業Webサイト・ランディングページのデザイン制作",
+        "CMS導入と多言語サイト構築",
+        "Web保守・UI/UX改善コンサルティング"
       ]
     },
     "staffing": {
-      "title": "人材派遣・紹介事業",
+      "title": "人材派遣・SES事業",
       "cards": [
-        "IT・不動産業界を中心とした人材マッチング",
-        "多国籍バイリンガル人材紹介"
+        "ITエンジニア・Webデザイナーの派遣",
+        "日本語・中国語・英語に対応可能なバイリンガル人材紹介",
+        "受託・常駐案件への柔軟なアサイン体制"
       ]
     },
-    "it_consulting": {
-      "title": "IT開発・コンサルティング",
+    "global_biz": {
+      "title": "BtoBパートナー支援",
       "cards": [
-        "業務システム開発、Webサービス構築",
-        "中小企業向けIT導入支援"
+        "海外企業との業務提携・開発体制構築支援",
+        "多国籍チームによるプロジェクト推進",
+        "国際契約・通訳・翻訳のサポート"
       ]
     },
-    "international_trade": {
-      "title": "国際貿易支援事業",
+    "startup": {
+      "title": "スタートアップ技術支援",
       "cards": [
-        "アジア諸国との物品輸出入支援",
-        "越境EC・現地通訳との連携"
+        "MVP開発・技術選定の支援",
+        "資金調達前後の技術基盤整備",
+        "共同開発・プロトタイプ実装の伴走支援"
       ]
     },
-    "design": {
-      "title": "店舗設計・内装事業",
+    "tourism": {
+      "title": "観光企画・イベント",
       "cards": [
-        "飲食・小売向け空間設計",
-        "内装工事の施工管理"
-      ]
-    },
-    "consulting": {
-      "title": "多分野ビジネスコンサル",
-      "cards": [
-        "経営戦略立案の支援",
-        "海外進出・業務改善のアドバイス"
-      ]
-    },
-    "solution": {
-      "title": "不動産とITの融合提案",
-      "cards": [
-        "スマートオフィス・民泊IoT連携事例",
-        "データ可視化による価値向上"
-      ]
-    },
-    "collab": {
-      "title": "多国籍ネットワーク活用",
-      "cards": [
-        "日中・東南アジア人材の連携",
-        "多言語対応ビジネス展開"
-      ]
-    },
-    "dx": {
-      "title": "業務のDX推進",
-      "cards": [
-        "社内業務のデジタル化",
-        "DX人材育成・外部連携支援"
-      ]
-    },
-    "newbiz": {
-      "title": "新事業への挑戦",
-      "cards": [
-        "海外医療ツーリズム",
-        "ブロックチェーン/AI実証実験"
+        "訪日外国人向けツアーの企画・運営",
+        "地域資源を活かした観光イベントプロデュース",
+        "自治体・民間企業との観光PR連携"
       ]
     }
   }
 }
-
-
-

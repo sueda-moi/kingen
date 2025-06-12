@@ -49,7 +49,7 @@ const Pg005: React.FC = () => {
 
       <div className="pg005-faq-list">
         {faqData.map((section, idx) => (
-          <details key={idx} className="pg005-faq-item">
+          <details key={idx} className="pg005-faq-item" open>
             <summary>{section.title}</summary>
             <ul>
               {section.questions.map((q, i) => (

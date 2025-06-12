@@ -1,118 +1,72 @@
 {
-  "pg004_section_main": "核心业务",
+  "pg004_section_main": "主要业务",
   "pg004_main_items": [
-    { "id": "real_estate_sales", "label": "不动产买卖与管理" },
-    { "id": "development", "label": "不动产开发业务" },
-    { "id": "housing", "label": "住宅住宿业务" },
-    { "id": "tourism", "label": "旅游业务" },
-    { "id": "staffing", "label": "人才派遣与介绍" },
-    { "id": "it_consulting", "label": "IT开发与咨询" },
-    { "id": "international_trade", "label": "国际贸易支持" },
-    { "id": "design", "label": "门店设计与内装" },
-    { "id": "consulting", "label": "多领域商务咨询" }
+    { "id": "it_development", "label": "系统开发与IT服务" },
+    { "id": "web_solution", "label": "网站制作与运维支持" },
+    { "id": "staffing", "label": "人才派遣与技术外包" },
+    { "id": "global_biz", "label": "B端合作伙伴支持" },
+    { "id": "startup", "label": "初创企业技术支持" },
+    { "id": "tourism", "label": "旅游企划与活动运营" }
   ],
   "pg004_section_solution": "解决方案与合作",
   "pg004_solution_items": [
-    { "id": "solution", "label": "不动产与IT融合提案" },
-    { "id": "collab", "label": "多国网络资源活用" }
+    { "id": "solution", "label": "IT领域整体提案" },
+    { "id": "collab", "label": "多国籍网络协同" }
   ],
-  "pg004_section_evolution": "进化与拓展",
+  "pg004_section_evolution": "持续发展",
   "pg004_evolution_items": [
-    { "id": "dx", "label": "推动数字化转型" },
-    { "id": "newbiz", "label": "挑战新事业领域" }
+    { "id": "dx", "label": "推进业务数字化转型" },
+    { "id": "newbiz", "label": "挑战新兴事业领域" }
   ],
   "pg004_title": "业务介绍",
-  "pg004_hero_subtitle": "金源株式会社的业务介绍",
+  "pg004_hero_subtitle": "金源株式会社的业务全貌",
   "pg004_sections": {
-    "real_estate_sales": {
-      "title": "不动产买卖与管理",
+    "it_development": {
+      "title": "系统开发与IT服务",
       "cards": [
-        "以东京圈为中心的不动产买卖中介与运营",
-        "投资型不动产的管理与合同支持"
+        "业务系统与云基础设施的设计与开发",
+        "电子商务与应用系统的建设与维护",
+        "支持 AWS / Azure 等云服务平台的导入"
       ]
     },
-    "development": {
-      "title": "不动产开发业务",
+    "web_solution": {
+      "title": "网站制作与运维支持",
       "cards": [
-        "以收益性为核心的土地开发与企划提案",
-        "再开发与联合开发项目支持"
-      ]
-    },
-    "housing": {
-      "title": "住宅住宿业务",
-      "cards": [
-        "民宿与长期住宿设施的运营",
-        "在东京推广公寓型住宿设施"
-      ]
-    },
-    "tourism": {
-      "title": "旅游业务",
-      "cards": [
-        "为访日游客安排旅游行程",
-        "策划与推广观光资源"
+        "企业官网与落地页的设计与制作",
+        "支持CMS的多语言网站构建",
+        "网站运维与UI/UX改进咨询"
       ]
     },
     "staffing": {
-      "title": "人才派遣与介绍",
+      "title": "人才派遣与技术外包",
       "cards": [
-        "主要面向IT与不动产行业的人才匹配",
-        "介绍多语言跨国人才"
+        "派遣 IT 工程师、Web 设计师等专业人才",
+        "提供中日英三语支持的双语人才",
+        "灵活配合外包与驻场项目"
       ]
     },
-    "it_consulting": {
-      "title": "IT开发与咨询",
+    "global_biz": {
+      "title": "B端合作伙伴支持",
       "cards": [
-        "业务系统开发与Web服务建设",
-        "为中小企业提供IT导入支持"
+        "协助海外企业建立开发体制与业务合作",
+        "多国籍团队推进跨境项目",
+        "提供国际合同、口译与翻译支持"
       ]
     },
-    "international_trade": {
-      "title": "国际贸易支持",
+    "startup": {
+      "title": "初创企业技术支持",
       "cards": [
-        "支援与亚洲国家的进出口业务",
-        "联动跨境电商与当地翻译服务"
+        "支持 MVP 开发与技术选型",
+        "帮助筹资前后构建技术基础",
+        "伴随式推进原型开发与联合研发"
       ]
     },
-    "design": {
-      "title": "门店设计与内装",
+    "tourism": {
+      "title": "旅游企划与活动运营",
       "cards": [
-        "为餐饮和零售业提供空间设计",
-        "内装工程的施工管理"
-      ]
-    },
-    "consulting": {
-      "title": "多领域商务咨询",
-      "cards": [
-        "支持企业战略规划制定",
-        "提供海外拓展与业务优化建议"
-      ]
-    },
-    "solution": {
-      "title": "不动产与IT融合提案",
-      "cards": [
-        "智慧办公室与民宿IoT整合案例",
-        "通过数据可视化提升资产价值"
-      ]
-    },
-    "collab": {
-      "title": "多国网络资源活用",
-      "cards": [
-        "中日与东南亚人才的协作",
-        "支持多语言化的业务发展"
-      ]
-    },
-    "dx": {
-      "title": "推动数字化转型",
-      "cards": [
-        "公司内部业务流程数字化",
-        "DX人才培养与外部协作支持"
-      ]
-    },
-    "newbiz": {
-      "title": "挑战新事业领域",
-      "cards": [
-        "海外医疗旅游项目",
-        "区块链/人工智能实验项目"
+        "面向访日游客的定制旅行与团体接待",
+        "结合在地资源策划旅游活动",
+        "与地方政府及企业合作进行观光推广"
       ]
     }
   }

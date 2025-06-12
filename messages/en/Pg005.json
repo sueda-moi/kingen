@@ -3,50 +3,50 @@
   "pg005_contact": "Contact Us",
   "faq_categories": [
     {
-      "title": "About Real Estate Sales & Leasing",
+      "title": "About IT Development & System Services",
       "questions": [
-        "Can I view the property before making a purchase?",
-        "What is the typical lease contract period?",
-        "Can non-Japanese nationals sign a contract?",
-        "Is corporate contract supported?"
+        "What programming languages and tech stacks do you support?",
+        "What’s included in your cloud implementation support?",
+        "Can you maintain and upgrade existing systems?",
+        "Do you provide security and backup solutions?"
       ]
     },
     {
-      "title": "About Architecture & Renovation",
+      "title": "About Web Production & Operation",
       "questions": [
-        "How do I consult about design or layout?",
-        "Can you arrange the construction company?",
-        "Do you support small-scale renovation?",
-        "Is architectural consulting available?"
+        "How long does it take to build a website?",
+        "Do you support CMS implementation and multilingual sites?",
+        "Can you assist with SEO and UI/UX improvements?",
+        "Can you renovate our existing website?"
       ]
     },
     {
-      "title": "About Hotel & Short-Stay Management",
+      "title": "About Staffing & SES Services",
       "questions": [
-        "Do you support acquiring a minpaku (short-stay) license?",
-        "Can you assist with procedures under the Hotel Business Law?",
-        "Is property management service available?",
-        "Do you offer profitability simulations?"
+        "What kind of engineers and designers can you dispatch?",
+        "Do you support remote or short-term assignments?",
+        "Can you provide bilingual or multilingual staff?",
+        "What is the difference between SES and outsourcing?"
       ]
     },
     {
-      "title": "About Staffing & Recruitment",
+      "title": "About Startup & B2B Support",
       "questions": [
-        "What types of positions can be dispatched?",
-        "Do you support short-term or temporary assignments?",
-        "Can you dispatch foreign workers?",
-        "What is the difference between dispatch and recruitment?"
+        "What is MVP development for startups?",
+        "How do you manage collaborations with overseas companies?",
+        "Do you support translation or interpretation of contracts?",
+        "What is the process to start a partnership?"
       ]
     }
   ],
-  "form_title": "Contact",
-  "form_name_label": "Name (required)",
+  "form_title": "Contact Us",
+  "form_name_label": "Your Name (required)",
   "form_email_label": "Email Address",
   "form_phone_label": "Phone Number",
-  "form_message_label": "Message (max 500 characters)",
+  "form_message_label": "Message (up to 500 characters)",
   "form_submit": "Submit",
   "form_close": "Close",
-  "form_error": "Please fill out all required fields",
-  "form_success": "Your message has been sent.",
-  "form_fail": "Failed to send your message. Please try again later."
+  "form_error": "Please fill in all required fields",
+  "form_success": "Your message has been successfully sent.",
+  "form_fail": "Failed to send. Please try again later."
 }

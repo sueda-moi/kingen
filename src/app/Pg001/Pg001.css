@@ -148,3 +148,45 @@
   color: #2563eb;
   font-size: 1.2rem;
 }
+
+
+@media (max-width: 767px) {
+  /* Hero 文本调整 */
+  .pg001-hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .pg001-hero-text p {
+    font-size: 1rem;
+  }
+
+  /* Intro 区域堆叠排列 */
+  .pg001-intro {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .pg001-intro-image {
+    margin-top: 1rem;
+  }
+
+  /* News 区块留白居中 */
+  .pg001-news {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+  }
+
+  /* Feature 卡片字体微调 */
+  .pg001-feature-card h4 {
+    font-size: 1rem;
+  }
+
+  .pg001-feature-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Section 标题字号缩小 */
+  .pg001-section-title {
+    font-size: 1.5rem;
+  }
+}

@@ -53,6 +53,7 @@
   "pg004_sections": {
     "it_development": {
       "title": "システム開発・ITサービス",
+      "category": "main",
       "cards": [
         "業務システム・クラウドインフラの設計・開発",
         "ECサイトやアプリケーションの構築・保守",
@@ -61,6 +62,7 @@
     },
     "web_solution": {
       "title": "Web制作・運用支援",
+      "category": "main",
       "cards": [
         "企業Webサイト・ランディングページのデザイン制作",
         "CMS導入と多言語サイト構築",
@@ -69,6 +71,7 @@
     },
     "staffing": {
       "title": "人材派遣・SES事業",
+      "category": "main",
       "cards": [
         "ITエンジニア・Webデザイナーの派遣",
         "日本語・中国語・英語に対応可能なバイリンガル人材紹介",
@@ -77,6 +80,7 @@
     },
     "global_biz": {
       "title": "BtoBパートナー支援",
+      "category": "main",
       "cards": [
         "海外企業との業務提携・開発体制構築支援",
         "多国籍チームによるプロジェクト推進",
@@ -85,6 +89,7 @@
     },
     "startup": {
       "title": "スタートアップ技術支援",
+      "category": "main",
       "cards": [
         "MVP開発・技術選定の支援",
         "資金調達前後の技術基盤整備",
@@ -93,10 +98,43 @@
     },
     "tourism": {
       "title": "観光企画・イベント",
+      "category": "main",
       "cards": [
         "訪日外国人向けツアーの企画・運営",
         "地域資源を活かした観光イベントプロデュース",
         "自治体・民間企業との観光PR連携"
+      ]
+    },
+    "solution": {
+      "title": "ITの提案",
+      "category": "solution",
+      "cards": [
+        "業務プロセスの可視化と最適化提案",
+        "SaaS導入・業務改善支援"
+      ]
+    },
+    "collab": {
+      "title": "多国籍ネットワーク活用",
+      "category": "solution",
+      "cards": [
+        "日中英バイリンガル体制での国際協業支援",
+        "東南アジア拠点との技術連携"
+      ]
+    },
+    "dx": {
+      "title": "業務のDX推進",
+      "category": "evolution",
+      "cards": [
+        "紙業務のデジタル化",
+        "AI・RPA導入による業務自動化"
+      ]
+    },
+    "newbiz": {
+      "title": "新事業への挑戦",
+      "category": "evolution",
+      "cards": [
+        "Web3やXR領域での技術検証",
+        "新規事業の技術PoC支援"
       ]
     }
   }

@@ -4,31 +4,40 @@ import Image from 'next/image';
 import './Pg004.css';
 import { useEffect, useState } from 'react';
 import { useMessage } from '@/lib/useMessage';
-import {
-  FaBuilding, FaGlobeAsia, FaTools, FaCogs, FaChartLine, FaPlusCircle,
-  FaUsers, FaRoute, FaHome, FaSitemap, FaHandshake
-} from 'react-icons/fa';
+import { FaBuilding, FaGlobeAsia, FaTools, FaCogs, FaChartLine, FaPlusCircle, FaUsers, FaRoute, FaHome, FaSitemap, FaHandshake } from 'react-icons/fa';
 
-import {
-  MenuItem,
-  SectionData,
-  IconMap,
-} from '@/types/Pg004';
+import { MenuItem, SectionData, IconMap, IconKey } from '@/types/Pg004';
+import MobileSubmenu from '@/components/MobileSubmenu/MobileSubmenu';
 
 const Pg004: React.FC = () => {
   const getMessage = useMessage();
   const [activeSection, setActiveSection] = useState('');
   const [showTop, setShowTop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const sectionsData = getMessage<SectionData>('Pg004', 'pg004_sections');
   const mainTitle = getMessage('Pg004', 'pg004_title');
   const subTitle = getMessage('Pg004', 'pg004_hero_subtitle');
-  const sectionMain = getMessage('Pg004', 'pg004_section_main');
-  const sectionSolution = getMessage('Pg004', 'pg004_section_solution');
-  const sectionEvolution = getMessage('Pg004', 'pg004_section_evolution');
-  const mainItems = getMessage<MenuItem[]>('Pg004', 'pg004_main_items');
-  const solutionItems = getMessage<MenuItem[]>('Pg004', 'pg004_solution_items');
-  const evolutionItems = getMessage<MenuItem[]>('Pg004', 'pg004_evolution_items');
+
+  const groupedItems = {
+    main: [] as MenuItem[],
+    solution: [] as MenuItem[],
+    evolution: [] as MenuItem[],
+  };
+
+  const allSections = Object.entries(sectionsData);
+
+  allSections.forEach(([id, section]) => {
+    const category = section.category || 'main';
+    groupedItems[category].push({ id: id as IconKey, label: section.title });
+  });
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,9 +56,11 @@ const Pg004: React.FC = () => {
 
       const cards = document.querySelectorAll('.pg004-card');
       cards.forEach((card) => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          card.classList.add('visible');
+        if (!card.classList.contains('visible')) {
+          const rect = card.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            card.classList.add('visible');
+          }
         }
       });
     };
@@ -74,7 +85,11 @@ const Pg004: React.FC = () => {
     solution: <FaCogs />,
     collab: <FaPlusCircle />,
     dx: <FaChartLine />,
-    newbiz: <FaPlusCircle />
+    newbiz: <FaPlusCircle />,
+    it_development: <FaTools />,
+    web_solution: <FaGlobeAsia />,
+    global_biz: <FaHandshake />,
+    startup: <FaChartLine />,
   };
 
   const renderMenu = (title: string, items: MenuItem[]) => (
@@ -84,7 +99,7 @@ const Pg004: React.FC = () => {
         {items.map((item) => (
           <li key={item.id}>
             <a href={`#${item.id}`} className={activeSection === item.id ? 'active' : ''}>
-              {iconMap[item.id]} {item.label}
+              {iconMap[item.id] ?? <FaBuilding />} {item.label}
             </a>
           </li>
         ))}
@@ -94,11 +109,17 @@ const Pg004: React.FC = () => {
 
   return (
     <div className="pg004-wrapper">
-      <div className="pg004-submenu">
-        {renderMenu(sectionMain, mainItems)}
-        {renderMenu(sectionSolution, solutionItems)}
-        {renderMenu(sectionEvolution, evolutionItems)}
-      </div>
+      {!isMobile && (
+        <div className="pg004-submenu">
+          {renderMenu('Main', groupedItems.main)}
+          {renderMenu('Solution & Collaboration', groupedItems.solution)}
+          {renderMenu('Evolution', groupedItems.evolution)}
+        </div>
+      )}
+
+      {isMobile && (
+        <MobileSubmenu iconMap={iconMap} groupedItems={groupedItems} />
+      )}
 
       <section className="pg004-hero">
         <Image src="/image/pg004-hero.jpg" alt="Business Content" fill className="pg004-hero-image" />
@@ -109,7 +130,7 @@ const Pg004: React.FC = () => {
       </section>
 
       <div className="pg004-body">
-        {Object.entries(sectionsData).map(([key, val]) => (
+        {allSections.map(([key, val]) => (
           <div key={key}>
             <h2 id={key}>{val.title}</h2>
             <div className="pg004-grid">

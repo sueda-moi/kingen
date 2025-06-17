@@ -133,3 +133,54 @@
 .pg004-top-btn:hover {
   background-color: #0c5dc0;
 }
+
+@media (max-width: 768px) {
+  /* 子菜单折叠或隐藏 */
+  .pg004-submenu {
+    display: none;
+  }
+
+  /* Hero 区字体调小，文字位置上移 */
+  .pg004-hero-text {
+    bottom: 15%;
+    left: 5%;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  .pg004-hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .pg004-hero-text p {
+    font-size: 1rem;
+  }
+
+  /* 卡片布局改为单列或两列 */
+  .pg004-grid {
+    grid-template-columns: 1fr; /* 或改为 1fr 1fr 看内容宽度 */
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .pg004-card {
+    font-size: 0.95rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* 标题缩小 */
+  h2[id] {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  /* 返回顶部按钮缩小一点 */
+  .pg004-top-btn {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.2rem;
+  }
+}
+

@@ -16,7 +16,11 @@ export type IconKey =
   | 'solution'
   | 'collab'
   | 'dx'
-  | 'newbiz';
+  | 'newbiz'
+  | 'it_development'
+  | 'web_solution'
+  | 'global_biz'
+  | 'startup';
 
 /**
  * Pg004 页面左侧导航栏每个链接项的类型
@@ -31,7 +35,8 @@ export type MenuItem = {
  */
 export type SectionCardGroup = {
   title: string;
-  cards: string[];
+  cards: string[]
+  category?: 'main' | 'solution' | 'evolution';
 };
 
 /**

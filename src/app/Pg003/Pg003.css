@@ -75,5 +75,6 @@
 
   .pg003-mission-image {
     width: 100%;
+    overflow: hidden;
   }
 }

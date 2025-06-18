@@ -192,4 +192,20 @@
   .pg001-section-title {
     font-size: 1.5rem;
   }
+
+.pg001-feature1-jpg{
+    width: 100%;
+    overflow: hidden;
+}
+
+.pg001-feature2-jpg{
+    width: 100%;
+    overflow: hidden;
+}
+
+.pg001-feature3-jpg{
+    width: 100%;
+    overflow: hidden;
+}
+
 }

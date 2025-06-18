@@ -54,17 +54,17 @@ const Pg001: React.FC = () => {
         <h2 className="pg001-section-title">{getMessage('Pg001', 'pg001_features_title')}</h2>
         <div className="pg001-feature-grid">
           <div className="pg001-feature-card">
-            <Image src="/image/pg001-feature1.jpg" alt="Feature 1" width={400} height={250} />
+            <Image src="/image/pg001-feature1.jpg" alt="Feature 1" className='pg001-feature1-jpg'   width={400} height={250} />
             <h4>① {getMessage('Pg001', 'pg001_feature1_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature1_desc')}</p>
           </div>
           <div className="pg001-feature-card">
-            <Image src="/image/pg001-feature2.jpg" alt="Feature 2" width={400} height={250} />
+            <Image src="/image/pg001-feature2.jpg" alt="Feature 2"  className='pg001-feature2-jpg'   width={400} height={250} />
             <h4>② {getMessage('Pg001', 'pg001_feature2_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature2_desc')}</p>
           </div>
           <div className="pg001-feature-card">
-            <Image src="/image/pg001-feature3.jpg" alt="Feature 3" width={400} height={250} />
+            <Image src="/image/pg001-feature3.jpg" alt="Feature 3"  className='pg001-feature3-jpg'  width={400} height={250} />
             <h4>③ {getMessage('Pg001', 'pg001_feature3_title')}</h4>
             <p>{getMessage('Pg001', 'pg001_feature3_desc')}</p>
           </div>

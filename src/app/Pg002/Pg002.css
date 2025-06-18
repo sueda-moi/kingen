@@ -67,5 +67,6 @@
 
   .pg002-image {
     width: 100%;
+    overflow: hidden;
   }
 }

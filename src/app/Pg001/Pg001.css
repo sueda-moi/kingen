@@ -151,6 +151,7 @@
 
 
 @media (max-width: 767px) {
+
   /* Hero 文本调整 */
   .pg001-hero-text h1 {
     font-size: 1.8rem;
@@ -168,6 +169,8 @@
 
   .pg001-intro-image {
     margin-top: 1rem;
+    width: 100%;
+    overflow: hidden;
   }
 
   /* News 区块留白居中 */

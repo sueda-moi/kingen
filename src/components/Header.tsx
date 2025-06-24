@@ -92,9 +92,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       {isMobile && isMenuOpen && (
         <div className="mobile-menu-overlay">
           <div className="mobile-menu-content">
-            <button className="close-button" onClick={toggleMenu}>
-              <FiX size={28} />
-            </button>
+
             <nav className="mobile-nav-menu">
               {navItems.map((item) =>
                 pathname === item.path ? (

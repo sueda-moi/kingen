@@ -1,5 +1,7 @@
 {
-  "pg004_section_main": "Our Business",
+  "pg004_section_main": "事業内容",
+  "pg004_section_solution": "ソリューションと連携",
+  "pg004_section_evolution": "進化",
   "pg004_main_items": [
     {
       "id": "it_development",
@@ -26,7 +28,6 @@
       "label": "観光企画・イベント"
     }
   ],
-  "pg004_section_solution": "Solution & Collaboration",
   "pg004_solution_items": [
     {
       "id": "solution",
@@ -37,7 +38,6 @@
       "label": "多国籍ネットワーク活用"
     }
   ],
-  "pg004_section_evolution": "Evolution",
   "pg004_evolution_items": [
     {
       "id": "dx",
@@ -137,5 +137,10 @@
         "新規事業の技術PoC支援"
       ]
     }
-  }
+  },
+
+
+  "pg004_section_main-phone": "事業内容",
+  "pg004_section_solution-phone": "ソリューションと連携",
+  "pg004_section_evolution-phone": "進化"
 }

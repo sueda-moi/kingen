@@ -16,13 +16,13 @@ const Pg003: React.FC = () => {
         <h2 className="pg003-section-title">{getMessage('Pg003', 'pg003_mission_title')}</h2>
         <div className="pg003-mission-grid">
           <div className="pg003-mission-text">
-            <h3>Our Mission</h3>
+            <h3>{getMessage('Pg003', 'pg003_mission_title_label')}</h3>
             <p>{getMessage('Pg003', 'pg003_mission')}</p>
 
-            <h3>Our Vision</h3>
+            <h3>{getMessage('Pg003', 'pg003_vision_title_label')}</h3>
             <p>{getMessage('Pg003', 'pg003_vision')}</p>
 
-            <h3>Our Value</h3>
+            <h3>{getMessage('Pg003', 'pg003_value_title_label')}</h3>
             <ul>
               {
                 Array.isArray(pg003_value_paragraphs)

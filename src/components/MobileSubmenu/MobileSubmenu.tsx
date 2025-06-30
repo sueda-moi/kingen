@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { MenuItem, IconMap } from '@/types/Pg004';
 import './MobileSubmenu.css';
+import { useMessage } from '@/lib/useMessage';
 
 
 interface MobileSubmenuProps {
@@ -17,6 +18,7 @@ interface MobileSubmenuProps {
 
 const MobileSubmenu: React.FC<MobileSubmenuProps> = ({ iconMap, groupedItems }) => {
   const [openSection, setOpenSection] = useState<string | null>(null);
+   const getMessage = useMessage();
 
   const handleScrollTo = (id: string) => {
     window.location.hash = id;
@@ -49,9 +51,9 @@ const MobileSubmenu: React.FC<MobileSubmenuProps> = ({ iconMap, groupedItems }) 
 
   return (
     <div className="mobile-submenu">
-      {renderGroup('Main', 'main')}
-      {renderGroup('Solution & Collaboration', 'solution')}
-      {renderGroup('Evolution', 'evolution')}
+      {renderGroup(getMessage('Pg004', 'pg004_section_main-phone'), 'main')}
+      {renderGroup(getMessage('Pg004', 'pg004_section_solution-phone'), 'solution')}
+      {renderGroup(getMessage('Pg004', 'pg004_section_evolution-phone'), 'evolution')}
     </div>
   );
 };

@@ -1,16 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import './Pg005.css';
+import styles from './Pg005.module.css';
 import { useMessage } from '@/lib/useMessage';
 import { sendContact } from '@/lib/sendContact';
-
+import { ChevronDown } from 'lucide-react';
 
 interface FaqSection {
   title: string;
   questions: string[];
 }
-
 
 const Pg005: React.FC = () => {
   const getMessage = useMessage();
@@ -21,6 +20,16 @@ const Pg005: React.FC = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+
+  const [openIndexes, setOpenIndexes] = useState<number[]>([]);
+
+  const toggleFaq = (index: number) => {
+    setOpenIndexes((prev) =>
+      prev.includes(index)
+        ? prev.filter((i) => i !== index)
+        : [...prev, index]
+    );
+  };
 
   const handleSubmit = async () => {
     if (!name || (!email && !phone) || !message) {
@@ -42,36 +51,47 @@ const Pg005: React.FC = () => {
     }
   };
 
-
   return (
-    <div className="pg005-wrapper">
-      <h1 className="pg005-title">{getMessage('Pg005', 'pg005_title')}</h1>
+    <div className={styles.wrapper}>
+      <h1 className={styles.title}>{getMessage('Pg005', 'pg005_title')}</h1>
 
-      <div className="pg005-faq-list">
-        {faqData.map((section, idx) => (
-          <details key={idx} className="pg005-faq-item" open>
-            <summary>{section.title}</summary>
-            <ul>
-              {section.questions.map((q, i) => (
-                <li key={i}>{q}</li>
-              ))}
-            </ul>
-          </details>
-        ))}
+      <div className={styles.faqList}>
+        {faqData.map((section, idx) => {
+          const isOpen = openIndexes.includes(idx);
+          return (
+            <div
+              key={idx}
+              className={`${styles.faqCard} ${isOpen ? styles.open : ''}`}
+            >
+              <div className={styles.faqHeader} onClick={() => toggleFaq(idx)}>
+                <span className={styles.faqTitle}>{section.title}</span>
+                <ChevronDown
+                  className={`${styles.faqIcon} ${isOpen ? styles.rotate : ''}`}
+                  size={20}
+                  strokeWidth={2.2}
+                />
+              </div>
+              {isOpen && (
+                <ul className={styles.faqContent}>
+                  {section.questions.map((q, i) => (
+                    <li key={i}>{q}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          );
+        })}
       </div>
 
-      <div className="pg005-contact">
-        <button
-          className="pg005-contact-btn"
-          onClick={() => setModalOpen(true)}
-        >
+      <div className={styles.contact}>
+        <button className={styles.contactBtn} onClick={() => setModalOpen(true)}>
           {getMessage('Pg005', 'pg005_contact')}
         </button>
       </div>
 
       {modalOpen && (
-        <div className="pg005-modal">
-          <div className="pg005-modal-content">
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
             <h2>{getMessage('Pg005', 'form_title')}</h2>
             <label>
               {getMessage('Pg005', 'form_name_label')}
@@ -105,16 +125,10 @@ const Pg005: React.FC = () => {
                 onChange={(e) => setMessage(e.target.value)}
               />
             </label>
-            <button
-              className="pg005-submit-btn"
-              onClick={handleSubmit}
-            >
+            <button className={styles.submitBtn} onClick={handleSubmit}>
               {getMessage('Pg005', 'form_submit')}
             </button>
-            <button
-              className="pg005-close-btn"
-              onClick={() => setModalOpen(false)}
-            >
+            <button className={styles.closeBtn} onClick={() => setModalOpen(false)}>
               {getMessage('Pg005', 'form_close')}
             </button>
           </div>

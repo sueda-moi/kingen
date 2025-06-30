@@ -1,13 +1,13 @@
 {
-  "pg003_mission_title": "Mission & Vision",
+  "pg003_mission_title": "ミッション & ビジョン",
   "pg003_mission": "信頼される多文化型テクノロジーパートナーとして、日本と世界をつなぐ架け橋となる。",
   "pg003_vision": "システム開発 × グローバル人材 × 地域活性化を融合した次世代型サービスモデルを構築し、持続可能な社会に貢献する。",
   "pg003_value": [
-    "Respect Differences, Build Bridges",
-    "Act with Integrity and Ownership",
-    "Deliver Reliable, Culturally-Aware Solutions"
+    "違いを尊重し、橋を築く",
+    "誠実に行動し、責任を持つ",
+    "信頼性が高く、文化に配慮したソリューションを提供する"
   ],
-  "pg003_about_title": "About Kingen",
+  "pg003_about_title": "金源について",
   "pg003_about_items": [
     "商号：金源株式会社",
     "所在地：東京都新宿区早稲田鶴巻町508番地5",
@@ -17,5 +17,8 @@
     "登記番号：0111-01-108741"
   ],
   "pg003_philosophy_title": "私たちの想い",
-  "pg003_philosophy_text": "金源株式会社は、多国籍の視点とテクノロジーの力を活かし、システム開発・人材支援・地域振興など幅広い分野で価値を提供しています。お客様のニーズに真摯に向き合い、信頼されるパートナーとして共に成長し続けます。"
+  "pg003_philosophy_text": "金源株式会社は、多国籍の視点とテクノロジーの力を活かし、システム開発・人材支援・地域振興など幅広い分野で価値を提供しています。お客様のニーズに真摯に向き合い、信頼されるパートナーとして共に成長し続けます。",
+  "pg003_mission_title_label": "私たちのミッション",
+  "pg003_vision_title_label": "私たちのビジョン",
+  "pg003_value_title_label": "私たちの価値"
 }

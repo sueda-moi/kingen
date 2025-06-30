@@ -111,10 +111,11 @@ const Pg004: React.FC = () => {
     <div className="pg004-wrapper">
       {!isMobile && (
         <div className="pg004-submenu">
-          {renderMenu('Main', groupedItems.main)}
-          {renderMenu('Solution & Collaboration', groupedItems.solution)}
-          {renderMenu('Evolution', groupedItems.evolution)}
+          {renderMenu(getMessage('Pg004', 'pg004_section_main'), groupedItems.main)}
+          {renderMenu(getMessage('Pg004', 'pg004_section_solution'), groupedItems.solution)}
+          {renderMenu(getMessage('Pg004', 'pg004_section_evolution'), groupedItems.evolution)}
         </div>
+
       )}
 
       {isMobile && (

@@ -1,5 +1,5 @@
-/* === 基础结构美化 + 动态过渡 === */
-.pg005-wrapper {
+/* === Base layout styles === */
+.wrapper {
   padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -8,7 +8,7 @@
   animation: fadeInUp 0.6s ease-in-out;
 }
 
-.pg005-title {
+.title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 50px;
@@ -16,7 +16,7 @@
   position: relative;
 }
 
-.pg005-title::after {
+.title::after {
   content: '';
   display: block;
   width: 60px;
@@ -26,75 +26,77 @@
   border-radius: 2px;
 }
 
-/* === FAQ 部分 === */
-.pg005-faq-list {
+/* === FAQ section styles (replacing old <details>/<summary>) === */
+.faqList {
   margin-bottom: 60px;
 }
 
-.pg005-faq-item {
-  border-top: 1px solid #ccc;
-  padding: 18px 0;
-  transition: background-color 0.3s ease;
+.faqCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
-.pg005-faq-item:hover {
-  background-color: #f9f9fc;
+.faqCard.open {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.pg005-faq-item summary {
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
+.faqHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style: none;
-}
-
-.pg005-faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.pg005-faq-item summary::after {
-  content: '+';
-  font-size: 22px;
-  line-height: 1;
+  padding: 18px 24px;
+  cursor: pointer;
+  background: linear-gradient(to right, #f0f4ff, #f7f9fc);
+  font-weight: 600;
+  font-size: 17px;
   color: #2e2e6f;
+}
+
+.faqTitle {
+  flex: 1;
+}
+
+.faqIcon {
   transition: transform 0.3s ease;
 }
 
-.pg005-faq-item[open] summary::after {
-  content: '-';
+.rotate {
   transform: rotate(180deg);
 }
 
-.pg005-faq-item ul {
-  padding-left: 0;
-  margin-top: 14px;
+.faqContent {
+  padding: 16px 30px 24px;
   animation: fadeIn 0.4s ease-in-out;
+  font-size: 15px;
+  color: #333;
+  list-style: none;
 }
 
-.pg005-faq-item li {
+.faqContent li {
   margin-bottom: 10px;
-  font-size: 16px;
-  padding-left: 1.2em;
-  text-indent: -1.2em;
+  position: relative;
+  padding-left: 20px;
 }
 
-.pg005-faq-item li::before {
-  content: '\2022';
-  color: #2e2e6f;
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.2em;
+.faqContent li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #4b4bb2;
+  font-size: 12px;
 }
 
-/* === 联系按钮样式 === */
-.pg005-contact {
+/* === Contact button === */
+.contact {
   text-align: center;
 }
 
-.pg005-contact-btn {
+.contactBtn {
   padding: 14px 32px;
   background: linear-gradient(to right, #2e2e6f, #4b4bb2);
   color: white;
@@ -106,13 +108,13 @@
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.pg005-contact-btn:hover {
+.contactBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* === 弹窗样式 === */
-.pg005-modal {
+/* === Modal (contact form) === */
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -127,7 +129,7 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.pg005-modal-content {
+.modalContent {
   background-color: #fff;
   padding: 30px 40px;
   border-radius: 12px;
@@ -137,21 +139,21 @@
   animation: slideUp 0.3s ease-in-out;
 }
 
-.pg005-modal-content h2 {
+.modalContent h2 {
   font-size: 22px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.pg005-modal-content label {
+.modalContent label {
   display: block;
   margin-bottom: 16px;
   font-size: 14px;
   color: #444;
 }
 
-.pg005-modal-content input,
-.pg005-modal-content textarea {
+.modalContent input,
+.modalContent textarea {
   width: 100%;
   padding: 10px 14px;
   margin-top: 6px;
@@ -161,18 +163,18 @@
   transition: border-color 0.3s ease;
 }
 
-.pg005-modal-content input:focus,
-.pg005-modal-content textarea:focus {
+.modalContent input:focus,
+.modalContent textarea:focus {
   border-color: #2e2e6f;
   outline: none;
 }
 
-.pg005-modal-content textarea {
+.modalContent textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-.pg005-submit-btn {
+.submitBtn {
   background-color: #2e2e6f;
   color: white;
   padding: 10px 24px;
@@ -184,11 +186,11 @@
   transition: background-color 0.3s ease;
 }
 
-.pg005-submit-btn:hover {
+.submitBtn:hover {
   background-color: #1f1f5a;
 }
 
-.pg005-close-btn {
+.closeBtn {
   background-color: transparent;
   color: #333;
   padding: 10px 20px;
@@ -199,11 +201,11 @@
   transition: background-color 0.3s ease;
 }
 
-.pg005-close-btn:hover {
+.closeBtn:hover {
   background-color: #f0f0f0;
 }
 
-/* === 动画 Keyframes === */
+/* === Keyframe animations === */
 @keyframes fadeInUp {
   from {
     opacity: 0;

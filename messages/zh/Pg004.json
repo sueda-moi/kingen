@@ -1,22 +1,52 @@
 {
   "pg004_section_main": "主要业务",
-  "pg004_main_items": [
-    { "id": "it_development", "label": "系统开发与IT服务" },
-    { "id": "web_solution", "label": "网站制作与运维支持" },
-    { "id": "staffing", "label": "人才派遣与技术外包" },
-    { "id": "global_biz", "label": "B端合作伙伴支持" },
-    { "id": "startup", "label": "初创企业技术支持" },
-    { "id": "tourism", "label": "旅游企划与活动运营" }
-  ],
-  "pg004_section_solution": "解决方案与合作",
-  "pg004_solution_items": [
-    { "id": "solution", "label": "IT领域整体提案" },
-    { "id": "collab", "label": "多国籍网络协同" }
-  ],
   "pg004_section_evolution": "持续发展",
+  "pg004_section_solution": "解决方案与合作",
+  "pg004_main_items": [
+    {
+      "id": "it_development",
+      "label": "系统开发与IT服务"
+    },
+    {
+      "id": "web_solution",
+      "label": "网站制作与运维支持"
+    },
+    {
+      "id": "staffing",
+      "label": "人才派遣与技术外包"
+    },
+    {
+      "id": "global_biz",
+      "label": "B端合作伙伴支持"
+    },
+    {
+      "id": "startup",
+      "label": "初创企业技术支持"
+    },
+    {
+      "id": "tourism",
+      "label": "旅游企划与活动运营"
+    }
+  ],
+  "pg004_solution_items": [
+    {
+      "id": "solution",
+      "label": "IT领域整体提案"
+    },
+    {
+      "id": "collab",
+      "label": "多国籍网络协同"
+    }
+  ],
   "pg004_evolution_items": [
-    { "id": "dx", "label": "推进业务数字化转型" },
-    { "id": "newbiz", "label": "挑战新兴事业领域" }
+    {
+      "id": "dx",
+      "label": "推进业务数字化转型"
+    },
+    {
+      "id": "newbiz",
+      "label": "挑战新兴事业领域"
+    }
   ],
   "pg004_title": "业务介绍",
   "pg004_hero_subtitle": "金源株式会社的业务全貌",
@@ -69,5 +99,8 @@
         "与地方政府及企业合作进行观光推广"
       ]
     }
-  }
+  },
+  "pg004_section_main-phone": "主要业务",
+  "pg004_section_solution-phone": "持续发展",
+  "pg004_section_evolution-phone": "解决方案与合作"
 }

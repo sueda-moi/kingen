@@ -1,0 +1,60 @@
+.faq-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-card.open {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  cursor: pointer;
+  background: linear-gradient(to right, #f0f4ff, #f7f9fc);
+  font-weight: 600;
+  color: #2e2e6f;
+  font-size: 17px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 16px 30px 24px;
+  animation: fadeIn 0.4s ease-in-out;
+  font-size: 15px;
+  color: #333;
+  list-style: none;
+}
+
+.faq-content li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.faq-content li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #4b4bb2;
+  font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
